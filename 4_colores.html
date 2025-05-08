@@ -11,6 +11,28 @@
     <div style="height: 200px; width: 200px; background-color: green;" id="box3"></div>
     <div style="height: 200px; width: 200px; background-color: yellow;" id="box4"></div>
 <script>
+
+    const box1 = document.getElementById("box1")
+    const box2 = document.getElementById("box2")
+    const box3 = document.getElementById("box3")
+    const box4 = document.getElementById("box4")
+
+    function pintarNegro(element) {
+        element.style.backgroundColor = 'black'
+    }
+
+    box1.addEventListener("click", function(event){
+        pintarNegro(event.target)
+    })
+    box2.addEventListener("click", function(event){
+        pintarNegro(event.target)
+    })
+    box3.addEventListener("click", function(event){
+        pintarNegro(event.target)
+    })
+    box4.addEventListener("click", function(event){
+        pintarNegro(event.target)
+    })
     
 </script>
 </body>
