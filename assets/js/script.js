@@ -6,16 +6,16 @@ const ele = document.getElementById("ele1")
 ele.addEventListener("click", pintar);
 
 // Función 2.2
-function pintar(elemento) {
-    elemento.style.backgroundColor = 'yellow'
+function pintar(element) {
+    element.style.backgroundColor = 'yellow'
 }
 ele.addEventListener("click", function (event) {
     pintar(event.target)
 });
 
 // Funcion 2.3
-function pintar(elemento, color = "green") {
-    elemento.style.backgroundColor = color
+function pintar(element, color = "green") {
+    element.style.backgroundColor = color
 }
 
 ele.addEventListener("click", function (event) {
