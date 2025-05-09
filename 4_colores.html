@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div style="height: 200px; width: 200px; background-color: blue;" id="box1"></div>
     <div style="height: 200px; width: 200px; background-color: red;" id="box2"></div>
     <div style="height: 200px; width: 200px; background-color: green;" id="box3"></div>
     <div style="height: 200px; width: 200px; background-color: yellow;" id="box4"></div>
-<script>
+    <script>
 
-    const box1 = document.getElementById("box1")
-    const box2 = document.getElementById("box2")
-    const box3 = document.getElementById("box3")
-    const box4 = document.getElementById("box4")
+        const box1 = document.getElementById("box1")
+        const box2 = document.getElementById("box2")
+        const box3 = document.getElementById("box3")
+        const box4 = document.getElementById("box4")
 
-    function pintarNegro(element) {
-        element.style.backgroundColor = 'black'
-    }
+        function pintarNegro(element) {
+            element.style.backgroundColor = 'black'
+        }
 
-    box1.addEventListener("click", function(event){
-        pintarNegro(event.target)
-    })
-    box2.addEventListener("click", function(event){
-        pintarNegro(event.target)
-    })
-    box3.addEventListener("click", function(event){
-        pintarNegro(event.target)
-    })
-    box4.addEventListener("click", function(event){
-        pintarNegro(event.target)
-    })
-    
-</script>
+        box1.addEventListener("click", function (event) {
+            pintarNegro(event.target)
+        })
+        box2.addEventListener("click", function (event) {
+            pintarNegro(event.target)
+        })
+        box3.addEventListener("click", function (event) {
+            pintarNegro(event.target)
+        })
+        box4.addEventListener("click", function (event) {
+            pintarNegro(event.target)
+        })
+
+    </script>
 </body>
+
 </html>
