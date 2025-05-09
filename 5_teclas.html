@@ -13,6 +13,8 @@
 
     <script>
         const divASD = document.getElementById("key")
+        const divQWE = document.getElementById("key2")
+
         document.addEventListener('keydown', function (event) {
             if (event.key === 'a') {
                 divASD.style.backgroundColor = 'pink'
@@ -20,6 +22,16 @@
                 divASD.style.backgroundColor = 'orange'
             } else if (event.key === 'd') {
                 divASD.style.backgroundColor = 'skyBlue'
+            }
+        })
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'q') {
+                divQWE.style.backgroundColor = 'purple'
+            } else if (event.key === 'w') {
+                divQWE.style.backgroundColor = 'grey'
+            } else if (event.key === 'e') {
+                divQWE.style.backgroundColor = 'brown'
             }
         })
     </script>
