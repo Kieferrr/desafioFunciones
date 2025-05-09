@@ -8,32 +8,51 @@
 </head>
 
 <body>
-    <div id="key" style="width: 200px; height: 200px; background-color: white; border: solid 1px black;"></div>
-    <div id="key2" style="width: 200px; height: 200px; background-color: white; border: solid 1px black;"></div>
+    <div id="key" style="width: 200px; height: 200px; background-color: white; border: solid 2px black;"></div>
 
     <script>
         const divASD = document.getElementById("key")
-        const divQWE = document.getElementById("key2")
+        const newDiv = document.createElement('div')
+        let color = ''
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'a') {
-                divASD.style.backgroundColor = 'pink'
+                color = 'pink'
+                divASD.style.backgroundColor = color
             } else if (event.key === 's') {
-                divASD.style.backgroundColor = 'orange'
+                color = 'orange'
+                divASD.style.backgroundColor = color
             } else if (event.key === 'd') {
-                divASD.style.backgroundColor = 'skyBlue'
+                color = 'skyBlue'
+                divASD.style.backgroundColor = color
             }
         })
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'q') {
-                divQWE.style.backgroundColor = 'purple'
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'purple'
+                newDiv.style.backgroundColor = color
             } else if (event.key === 'w') {
-                divQWE.style.backgroundColor = 'grey'
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'grey'
+                newDiv.style.backgroundColor = color
             } else if (event.key === 'e') {
-                divQWE.style.backgroundColor = 'brown'
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'brown'
+                newDiv.style.backgroundColor = color
             }
         })
+
     </script>
 </body>
 
