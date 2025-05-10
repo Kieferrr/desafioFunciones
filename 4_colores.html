@@ -7,17 +7,21 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="height: 100vh; display: flex; gap: 10px; align-items: center; justify-content: center;">
     <div style="height: 200px; width: 200px; background-color: blue;" id="box1"></div>
     <div style="height: 200px; width: 200px; background-color: red;" id="box2"></div>
     <div style="height: 200px; width: 200px; background-color: green;" id="box3"></div>
     <div style="height: 200px; width: 200px; background-color: yellow;" id="box4"></div>
+    <div id="key" style="width: 200px; height: 200px; background-color: white; border: solid 2px black;"></div>
     <script>
 
         const box1 = document.getElementById("box1")
         const box2 = document.getElementById("box2")
         const box3 = document.getElementById("box3")
         const box4 = document.getElementById("box4")
+        const divASD = document.getElementById("key")
+        const newDiv = document.createElement('div')
+        let color = ''
 
         function pintarNegro(element) {
             element.style.backgroundColor = 'black'
@@ -34,6 +38,44 @@
         })
         box4.addEventListener("click", function (event) {
             pintarNegro(event.target)
+        })
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'a') {
+                color = 'pink'
+                divASD.style.backgroundColor = color
+            } else if (event.key === 's') {
+                color = 'orange'
+                divASD.style.backgroundColor = color
+            } else if (event.key === 'd') {
+                color = 'skyBlue'
+                divASD.style.backgroundColor = color
+            }
+        })
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'q') {
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'purple'
+                newDiv.style.backgroundColor = color
+            } else if (event.key === 'w') {
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'grey'
+                newDiv.style.backgroundColor = color
+            } else if (event.key === 'e') {
+                document.querySelector('body').appendChild(newDiv)
+                newDiv.style.width = "200px"
+                newDiv.style.height = "200px"
+                newDiv.style.border = "solid 2px black"
+                color = 'brown'
+                newDiv.style.backgroundColor = color
+            }
         })
 
     </script>
